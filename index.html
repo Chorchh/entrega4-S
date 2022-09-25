@@ -5,6 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./style.css" />
+    <script
+      src="https://kit.fontawesome.com/e81d14ea7c.js"
+      crossorigin="anonymous"
+    ></script>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
@@ -14,13 +18,20 @@
   <body>
     <section>
       <h1>Busca tu Pokemon</h1>
+      <div class="poke-container">
+        <img
+          src="./img/pokeball.png"
+          alt="pokeball"
+          class="pokeball animate__animated animate__shakeX"
+        />
+      </div>
       <form id="form">
-        <input type="number" id="input" />
+        <input type="number" id="input" placeholder="Ingresa un número" />
         <button type="submit" class="button-28" role="button">Buscalo</button>
         <small class="msgError"></small>
       </form>
       <div class="cardContainer"></div>
-      <script src="./main.js"></script>
     </section>
+    <script src="./main.js"></script>
   </body>
 </html>

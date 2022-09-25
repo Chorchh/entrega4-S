@@ -7,7 +7,7 @@
 }
 
 body {
-    background-color: #0c4ea2;
+    background-color: white;
     color: black;
     font-family: "kanit", sans-serif;
 }
@@ -24,7 +24,18 @@ h1 {
     font-size: 90px;
     margin: 30px;
     padding: 40px;
-    color: #f7de82;
+    color: red;
+}
+
+.poke-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+}
+
+.pokeball {
+    width: 20%;
 }
 
 form {
@@ -48,10 +59,10 @@ input {
 .button-28 {
     appearance: none;
     background-color: transparent;
-    border: 2px solid #f7de82;
+    border: 2px solid black;
     border-radius: 15px;
     box-sizing: border-box;
-    color: #f7de82;
+    color: black;
     cursor: pointer;
     display: inline-block;
     font-size: 16px;
@@ -70,8 +81,8 @@ input {
 }
 
 .button-28:hover {
-    color: #0c4ea2;
-    background-color: #f7de82;
+    color: black;
+    background-color: red;
     box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
     transform: translateY(-5px);
 }
@@ -84,13 +95,6 @@ input {
 .msgError {
     font-size: 30px;
     color: #f01919;
-}
-
-.cardContainer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
 }
 
 .cardPokemon {
@@ -106,22 +110,28 @@ input {
     justify-content: center;
     align-items: center;
     position: relative;
-    /* background: rgb(247,222,130);
-background: linear-gradient(360deg, rgba(247,222,130,1) 60%, rgba(255,255,255,1) 60%); */
+}
+
+.img-container {
+    background-color: antiquewhite;
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    top: 30px;
+    /* left: 100px; */
+    border-radius: 50%;
 }
 
 .img-pokemon {
-    width: 50%;
-    position: absolute;
-    top: 10px;
+    width: 100%;
 }
 
 .cardPokemon h2 {
     color: black;
-    font-size: 30px;
+    font-size: 40px;
     text-transform: uppercase;
     position: absolute;
-    top: 200px;
+    top: 180px;
 }
 
 .altura {
@@ -140,8 +150,8 @@ background: linear-gradient(360deg, rgba(247,222,130,1) 60%, rgba(255,255,255,1)
 
 .type {
     position: absolute;
-    bottom: 30%;
-    font-size: 20px;
+    bottom: 220px;
+    font-size: 25px;
 }
 
 .numero {
@@ -151,3 +161,23 @@ background: linear-gradient(360deg, rgba(247,222,130,1) 60%, rgba(255,255,255,1)
     font-size: 35px;
 }
 
+.hp {
+    font-size: 20px;
+}
+
+.hp-pokemon {
+    position: absolute;
+    bottom: 10px;
+    font-size: 20px;
+}
+
+.habilidades {
+    position: absolute;
+    bottom: 100px;
+    left: 130px;
+    font-size: 23px;
+}
+
+.habilidades p {
+    font-size: 18px;
+}

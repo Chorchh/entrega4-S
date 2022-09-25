@@ -45,9 +45,6 @@ const getPokemon = async e => {
     return;
   }
 
-  // if (pokemones.some(pokemon => pokemon.types[0].type.name === fetchedPokemon.types[0].type.name)){
-  //   poke.style.background = "#3C9950";
-  // }
 
   pokemones = [fetchedPokemon, ... pokemones];
   msgError.textContent = "";
@@ -102,11 +99,16 @@ const createHTML = pokemon =>{
     return `
     <div class="cardPokemon" style="background-color: ${colorPokemon[typePokemon]}">
     <p class="numero">${pokemon.id}</p>
-    <img src="${imgPokemon}" class="img-pokemon" alt="Pokemon"/>
+    <div class="img-container"><img src="${imgPokemon}" class="img-pokemon" alt="Pokemon"/></div>
     <h2 class="pkmName">${pokemon.name}</h2>
     <p class="type">Tipo: ${pokemon.types[0].type.name}</p>
     <p class="altura">Altura: ${convertHeight(pokemon.height)} Mts</p>
     <p class="peso">Peso: ${convertWeight(pokemon.weight)} Kgs</p>
+    <p class="hp-pokemon">HP: ${pokemon.stats[0].base_stat}</p>
+    <div class="habilidades"><h4>Habilidades</h4>
+    <p class="habilidad">${pokemon.abilities[0].ability.name}</p>
+    <p class="habilidad">${pokemon.abilities[1].ability.name}</p>
+    </div>
     </div>`
 }
 
